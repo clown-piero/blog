@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @blogcontent.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @blogcontent.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_blogcontent_path(@blogcontent) %> |
+<%= link_to 'Back', blogcontents_path %>

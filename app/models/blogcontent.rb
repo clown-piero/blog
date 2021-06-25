@@ -1,0 +1,2 @@
+class Blogcontent < ApplicationRecord
+end

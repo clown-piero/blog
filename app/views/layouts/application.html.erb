@@ -18,7 +18,7 @@
 
       </div>
       <ul class="header-menu">
-        <% if session[:user_id] %>
+        <% if @current_user %>
           <li>
             <%= link_to("home", "/static_pages/home") %>
           </li>
@@ -27,6 +27,9 @@
           </li>
           <li>
             <%= link_to("logout", "/logout", {method: "post"}) %>
+          </li>
+          <li>
+            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
         <% else %>
           <li>

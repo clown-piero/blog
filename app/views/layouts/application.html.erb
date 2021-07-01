@@ -18,14 +18,27 @@
 
       </div>
       <ul class="header-menu">
-        <li>
-          <%= link_to("home", "/static_pages/home") %>
-        </li>
-        <li>
-          <%= link_to("help", "/static_pages/help") %>
-        </li>
-        <li>
-          <%= link_to("login", "/users/login_form") %>
+        <% if session[:user_id] %>
+          <li>
+            <%= link_to("home", "/static_pages/home") %>
+          </li>
+          <li>
+            <%= link_to("help", "/static_pages/help") %>
+          </li>
+          <li>
+            <%= link_to("logout", "/logout", {method: "post"}) %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("home", "/static_pages/home") %>
+          </li>
+          <li>
+            <%= link_to("help", "/static_pages/help") %>
+          </li>
+          <li>
+            <%= link_to("login", "/users/login_form") %>
+          </li>
+        <% end %>
       </ul>
     </header>
 

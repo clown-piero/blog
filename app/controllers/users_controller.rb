@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, {only: [:mypage]}
+  before_action :forbit_login_user, {only: [:new, :create, :login_form, :login]}
+
   def new
     @user = User.new
   end
@@ -39,6 +42,22 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     flash[:notice] = "ログアウトしました"
     redirect_to("/")
+  end
+
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+
+  def update
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    if @user.save
+      flash[:notice] = "編集しました"
+      redirect_to("/users/#{@user.id}")
+    else
+      render("users/edit")
+    end
   end
 
 

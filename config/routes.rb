@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get 'static_pages/help'
   get "/" => "static_pages#top"
   get "blogtexts/new" => "blogtexts#new"
+  get "blogtexts/show" => "blogtexts#show"
+  post "blogtexts/create" =>"blogtexts#create"
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

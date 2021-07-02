@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "/" => "static_pages#top"
   get "blogtexts/new" => "blogtexts#new"
   get "blogtexts/show" => "blogtexts#show"
+  get "blogtexts/:id" => "blogtexts#details"
   post "blogtexts/create" =>"blogtexts#create"
   
   

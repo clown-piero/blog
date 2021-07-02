@@ -1,4 +1,6 @@
 class BlogtextsController < ApplicationController
+  before_action :authenticate_user, {only: [:new, :create]}
+
   def new
     @blogtext = Blogtext.new
   end
@@ -12,4 +14,13 @@ class BlogtextsController < ApplicationController
       render("blogtexts/new")
     end
   end
+
+  def show
+    @blogtexts = Blogtext.all.order(created_at: :desc)
+  end
+
+  def details
+    @blogtext = Blogtext.find_by(id: params[:id])
+  end
+
 end

@@ -34,6 +34,9 @@
           <li>
             <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
+          <li>
+            <%= link_to("みんなの投稿", "blogtexts/show") %>
+          </li>
         <% else %>
           <li>
             <%= link_to("home", "/static_pages/home") %>

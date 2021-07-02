@@ -29,6 +29,9 @@
             <%= link_to("logout", "/logout", {method: "post"}) %>
           </li>
           <li>
+            <%= link_to("新規投稿", "/blogtexts/new") %>
+          </li>
+          <li>
             <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
           </li>
         <% else %>

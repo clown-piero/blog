@@ -1,5 +1,12 @@
 <h2><%= @user.name %></h2>
+
+
 <% if @user.id == @current_user.id %>
     <p><%= @user.email %></p>
     <%= link_to("編集", "/users/#{@user.id}/edit") %>
+<% end %>
+
+<p>投稿一覧</p>
+<% @user.blogtexts.each do |blogtext| %>
+    <%= link_to(blogtext.title, "/blogtexts/#{blogtext.id}") %>
 <% end %>

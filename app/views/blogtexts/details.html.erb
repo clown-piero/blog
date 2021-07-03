@@ -5,8 +5,12 @@
     <%= @blogtext.content %>
 </p>
 <p>
-    <%= link_to(@user.name, "/users/#{@user.id}") %>
+    <%= @user.name %>
 </p>
-
+<% if @user.id == @current_user.id %>
+    <p>
+        <%= link_to("消去", "/blogtexts/#{@blogtext.id}/destroy", {method: "post"}) %>
+    </p>
+<% end %>
 
 

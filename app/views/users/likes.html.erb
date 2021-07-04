@@ -11,7 +11,8 @@
     <li><%= link_to("いいね一覧", "/users/#{@user.id}/likes") %></li>
 </ul>
 
-<p>投稿一覧</p>
-<% @user.blogtexts.each do |blogtext| %>
+<% @likes.each do |like| %>
+    <% blogtext = Blogtext.find_by(id: like.post_id) %>
     <%= link_to(blogtext.title, "/blogtexts/#{blogtext.id}") %>
+    <%= link_to(blogtext.user.name, "/users/#{blogtext.user.id}") %>
 <% end %>

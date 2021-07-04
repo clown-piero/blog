@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get "blogtexts/:id" => "blogtexts#details"
   post "blogtexts/create" => "blogtexts#create"
   post "blogtexts/:id/destroy" => "blogtexts#destroy"
+  post "likes/:post_id/favorite" => "likes#favorite"
+  post "likes/:post_id/destroy" => "likes#destroy"
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

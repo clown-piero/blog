@@ -25,6 +25,8 @@ Rails.application.routes.draw do
       get :followings, :followers
     end
   end
+  post "users/un_follow" => "users#un_follow"
+  post "users/follow" => "users#follow"
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

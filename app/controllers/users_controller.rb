@@ -69,6 +69,21 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
   end
 
+  def followers
+  end
+
+  def un_follow
+    @relationships = Relationship.find_by(follower_id: @current_user.id, followed_id: params[:id])
+    @relationships.destroy
+    redirect_to("/users/#{params[:id]}")
+  end
+
+  def follow
+    @relationships = Relationship.new(follower_id: @current_user.id, followed_id: params[:id])
+    @relationships.save
+    redirect_to("/users/#{params[:id]}")
+  end
+
 
 
 

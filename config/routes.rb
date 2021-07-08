@@ -20,6 +20,11 @@ Rails.application.routes.draw do
   post "blogtexts/:id/destroy" => "blogtexts#destroy"
   post "likes/:post_id/favorite" => "likes#favorite"
   post "likes/:post_id/destroy" => "likes#destroy"
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

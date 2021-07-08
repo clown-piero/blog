@@ -6,6 +6,11 @@
     <%= link_to("編集", "/users/#{@user.id}/edit") %>
 <% end %>
 
+<p>following</p>
+<%= link_to(@user.following.count, "/users/#{@user.id}/following") %>
+<p>followers</p>
+<%= link_to(@user.followers.count, "/users/#{@user.id}/followers") %>
+
 <ul>
     <li><%= link_to("投稿一覧", "/users/#{@user.id}") %></li>
     <li><%= link_to("いいね一覧", "/users/#{@user.id}/likes") %></li>

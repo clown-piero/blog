@@ -7,7 +7,7 @@
 <% end %>
 
 <p>following</p>
-<%= link_to(@user.following.count, "/users/#{@user.id}/following") %>
+<%= link_to(@user.followings.count, "/users/#{@user.id}/followings") %>
 <p>followers</p>
 <%= link_to(@user.followers.count, "/users/#{@user.id}/followers") %>
 

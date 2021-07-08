@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   post "likes/:post_id/destroy" => "likes#destroy"
   resources :users do
     member do
-      get :following, :followers
+      get :followings, :followers
     end
   end
   

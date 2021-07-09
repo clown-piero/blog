@@ -3,9 +3,9 @@
 <% if @user.id == @current_user.id then %>
     aaaaa
 <% elsif Relationship.find_by(follower_id: @user.id, followed_id: @current_user.id) then %>
-    <%= link_to("フォロー解除", "/users/un_follow") %>
+    <%= link_to("フォロー解除", "/users/un_follow", {method: "post"}) %>
 <% else %>
-    <%= link_to("フォローする", "/users/follow") %>
+    <%= link_to("フォローする", "/users/#{@user.id}/get_follow", {method: "post"}) %>
 <% end %>
 
 

@@ -70,6 +70,7 @@ class UsersController < ApplicationController
   end
 
   def followers
+    @user = User.find_by(id: params[:id])
     @followers = @user.followers
   end
 

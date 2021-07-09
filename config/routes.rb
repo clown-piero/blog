@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "users/:id" => "users#mypage"
   get "users/:id/edit" => "users#edit"
   get "users/:id/likes" => "users#likes"
-  post "users/un_follow" => "users#un_follow"
+  post "users/:id/un_follow" => "users#un_follow"
   post "users/:id/get_follow" => "users#get_follow"
   post "users/:id/update" => "users#update"
   post "login" => "users#login"

@@ -1,4 +1,4 @@
 <h1>FOLLOWINGS</h1>
 <% @user.followings.each do |following| %>
-    <%= link_to(following.name, "/users/#{following.id}" %>
+    <%= link_to(following.name, "/users/#{following.id}") %>
 <% end %>

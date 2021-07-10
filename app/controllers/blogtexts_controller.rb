@@ -16,7 +16,8 @@ class BlogtextsController < ApplicationController
   end
 
   def show
-    @blogtexts = Blogtext.all.order(created_at: :desc)
+    @search = Blogtext.ransack(params[:q])
+    @blogtexts = @search.result
   end
 
   def details

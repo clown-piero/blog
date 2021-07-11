@@ -70,6 +70,7 @@ class UsersController < ApplicationController
   end
 
   def followers
+    @user = User.find_by(id: params[:id])
     @followers = @user.followers
   end
 
@@ -79,7 +80,7 @@ class UsersController < ApplicationController
     redirect_to("/users/#{params[:id]}")
   end
 
-  def follow
+  def get_follow
     @relationships = Relationship.new(follower_id: @current_user.id, followed_id: params[:id])
     @relationships.save
     redirect_to("/users/#{params[:id]}")

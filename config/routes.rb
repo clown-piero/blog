@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "users/:id" => "users#mypage"
   get "users/:id/edit" => "users#edit"
   get "users/:id/likes" => "users#likes"
+  post "users/:id/un_follow" => "users#un_follow"
+  post "users/:id/get_follow" => "users#get_follow"
   post "users/:id/update" => "users#update"
   post "login" => "users#login"
   post "logout" => "users#logout"
@@ -25,8 +27,7 @@ Rails.application.routes.draw do
       get :followings, :followers
     end
   end
-  post "users/un_follow" => "users#un_follow"
-  post "users/follow" => "users#follow"
+  
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

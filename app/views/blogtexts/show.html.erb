@@ -1,4 +1,10 @@
 <h1>みんなの投稿</h1>
+<%= search_form_for @search, url: blogtexts_show_path do |f| %>
+    <%= f.label :title_cont, "タイトル名を含む" %>
+    <%= f.search_field :title_cont %>
+    <div class="actions"><%= f.submit "検索" %></div>
+<% end %>
+
 <% @blogtexts.each do |blogtext| %>
     <%= link_to(blogtext.title, "/blogtexts/#{blogtext.id}") %>
     <%= link_to(blogtext.user.name, "/users/#{blogtext.user.id}") %>

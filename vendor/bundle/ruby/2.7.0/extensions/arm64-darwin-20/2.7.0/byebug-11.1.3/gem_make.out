@@ -1,0 +1,19 @@
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/byebug-11.1.3/ext/byebug
+/Users/otareo/.rbenv/versions/2.7.2/bin/ruby -I /Users/otareo/.rbenv/versions/2.7.2/lib/ruby/2.7.0 -r ./siteconf20210726-12076-npw7vb.rb extconf.rb
+creating Makefile
+
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/byebug-11.1.3/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20210726-12076-1fvmlo7/byebug

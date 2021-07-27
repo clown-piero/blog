@@ -1,0 +1,15 @@
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+/Users/otareo/.rbenv/versions/2.7.2/bin/ruby -I /Users/otareo/.rbenv/versions/2.7.2/lib/ruby/2.7.0 -r ./siteconf20210726-12076-6jo29p.rb extconf.rb
+creating Makefile
+
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/otareo/development/blog/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210726-12076-7oac2j/bootsnap
